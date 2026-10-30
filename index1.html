@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An independent game development portfolio featuring original games and project updates.">
+  <title>My Games | Independent Game Developer</title>
+  <style>
+    :root { color-scheme: dark; --bg:#080b14; --panel:#111827; --text:#f3f6ff; --muted:#aab4c9; --cyan:#5cecff; --violet:#a896ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 75% 0%,#182442 0,transparent 42%),var(--bg); color:var(--text); font-family:Inter,"Segoe UI",Arial,sans-serif; }
+    a { color:inherit; }
+    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:1px solid #293247; }
+    .brand { font-weight:800; letter-spacing:.08em; text-decoration:none; }
+    .brand b { color:var(--cyan); }
+    nav a { color:var(--muted); text-decoration:none; margin-left:24px; font-size:.92rem; }
+    nav a:hover { color:var(--cyan); }
+    .hero { padding:90px 0 64px; max-width:760px; }
+    .eyebrow { color:var(--cyan); letter-spacing:.2em; text-transform:uppercase; font-size:.75rem; font-weight:700; }
+    h1 { font-size:clamp(2.7rem,7vw,5.5rem); line-height:1.02; letter-spacing:-.055em; margin:18px 0; }
+    h1 span { color:var(--cyan); }
+    .hero p { color:var(--muted); max-width:620px; font-size:1.15rem; line-height:1.7; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; margin:22px 0; }
+    h2 { font-size:1.6rem; margin:0; }
+    .section-heading p { margin:0; color:var(--muted); font-size:.9rem; }
+    .games { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px; padding-bottom:82px; }
+    .card { border:1px solid #293247; background:linear-gradient(145deg,#151e31,#0e1421); border-radius:16px; overflow:hidden; }
+    .art { height:190px; display:grid; place-items:center; background:radial-gradient(circle at 50% 55%,#203b5d,#111727 66%); color:var(--cyan); font-size:3.3rem; text-shadow:0 0 26px #00dfff; }
+    .card-body { padding:22px; }
+    .tag { color:var(--violet); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; }
+    h3 { margin:9px 0; font-size:1.35rem; }
+    .card p { color:var(--muted); line-height:1.6; min-height:52px; margin:0 0 18px; }
+    .button { display:inline-block; border-radius:7px; background:var(--cyan); color:#061019; font-weight:800; padding:11px 16px; text-decoration:none; font-size:.9rem; }
+    .button:hover { box-shadow:0 0 22px #5cecff66; }
+    .button.muted { background:#293247; color:#d7deef; }
+    footer { border-top:1px solid #293247; color:var(--muted); padding:24px 0 34px; font-size:.86rem; }
+    @media(max-width:600px) { .wrap{width:min(100% - 28px,1080px)} header{align-items:flex-start;gap:18px;flex-direction:column} nav a{margin:0 18px 0 0} .hero{padding:60px 0 44px} .section-heading{align-items:flex-start;gap:8px;flex-direction:column} }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#top">MY <b>GAMES</b></a>
+    <nav aria-label="Main navigation"><a href="#games">Games</a><a href="#about">About</a></nav>
+  </header>
+  <main id="top" class="wrap">
+    <section class="hero" id="about">
+      <div class="eyebrow">Independent game development</div>
+      <h1>Original games.<br><span>Made to be played.</span></h1>
+      <p>Welcome to my game portfolio. Explore my projects, find downloads, and follow along as new games are made.</p>
+    </section>
+    <section id="games" aria-labelledby="games-title">
+      <div class="section-heading"><h2 id="games-title">Featured games</h2><p>More projects will be added here.</p></div>
+      <div class="games">
+        <article class="card">
+          <div class="art" aria-hidden="true">✦</div>
+          <div class="card-body">
+            <div class="tag">Windows · Arcade</div>
+            <h3>NEON DODGE</h3>
+            <p>Dodge incoming asteroids, survive the galaxy, and beat your best score.</p>
+            <!-- Replace this link with your GitHub Releases page after uploading the installer. -->
+            <a class="button muted" href="#" aria-label="NEON DODGE download link will be added after release">Download link coming soon</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year"></span> My Games · Independent game development</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
